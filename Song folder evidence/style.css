@@ -1,0 +1,113 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html {
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    background-color: rgb(76, 160, 228);
+    margin: 16px auto;
+    padding: 0 16px;
+    max-width: 1200px;
+}
+img, video, audio {
+    max-width: 100%;
+}
+img, video {
+    height: auto;
+}
+h1 {
+    color: #e4eff7;
+    font-family: Tangerine, cursive;
+    font-size: clamp(2.4em, 7vw, 3.5em);
+    font-weight: 800;
+    margin: 0;
+}
+h3 {
+    color: #e4eff7;
+    font-family: Tangerine, cursive;
+    font-size: clamp(22px, 4.5vw, 30px);
+    font-weight: 700;
+    margin: 4px 0 0;
+}
+.site-header {
+    display: flex;
+    align-items: center;            
+    justify-content: space-between; 
+    gap: 16px;
+}
+.titles {
+    min-width: 0;                   
+}
+#i1 {
+    border-style: outset;
+    border-color: azure;
+    border-radius: 14px;
+    width: clamp(70px, 13vw, 9em);  
+    flex-shrink: 0;                 
+}
+.layout {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 40%);
+    gap: 24px;
+    align-items: start;
+}
+.lyrics {
+    min-width: 0;            
+}
+pre {
+    color: aliceblue;
+    font-family: cursive;
+    font-size: clamp(14px, 2.6vw, 18px);
+    white-space: pre-wrap;   
+    overflow-wrap: break-word;
+    margin: 0;
+}
+.media-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+#i2 {
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #147ada;
+    width: 100%;
+}
+audio {
+    display: block;
+    width: 100%;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: rgba(3, 111, 206, 0.897);
+}
+video {
+    display: block;
+    width: 100%;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: rgb(252, 252, 252);
+}
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 42%);
+        gap: 16px;
+    }
+}
+@media (max-width: 640px) {
+    body {
+        margin: 12px auto;
+        padding: 0 10px;
+    }
+    .layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .media-column {
+        order: -1;           
+    }
+    #i1 {
+        width: 64px;
+    }
+}
